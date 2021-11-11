@@ -78,6 +78,8 @@ font-mono # font family
 uppercase # uppercase the text
 
 bg-red-100 # Background color
+
+tracking-wider # letter-spacing
 ```
 
 > Margin, Border and Padding
