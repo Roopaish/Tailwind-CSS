@@ -19,10 +19,10 @@ Create a folder and files needed.
 .
 ├── node-modules
 ├── public              # where the project is located
-│  ├── index.html
-│   └── styles.css       # generated from css file in src
+│  ├── index.html       # html file to work on
+│  └── styles.css       # generated from css file in src
 ├── src
-│   └── styles.css       # tailwindcss components are defined here
+│   └── styles.css      # tailwindcss components are defined here
 ├── package.json
 ├── package-lock.json
 ```
@@ -73,6 +73,7 @@ text-6xl # big text
 
 font-bold # bold text
 font-semibold $ semibold text
+font-mono # font family
 
 uppercase # uppercase the text
 
@@ -141,3 +142,31 @@ Now re-build the public/styles.css file in order to use this.
 > TailwindCss Extension
 
 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) provides intellisense in tailwind project as we add classes. It works only if config file is present.
+
+> Custom font
+
+Import the font in src/styles.css
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Update tailwind config file and re-build css.
+
+```js
+theme: {
+  extend: {
+    ...
+    fontFamily: {
+        body: "Nunito",
+      },
+  }
+  ...
+}
+```
+
+`font-body` is the property to use this font.
