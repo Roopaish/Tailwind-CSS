@@ -83,15 +83,15 @@ bg-red-100 # Background color
 > Margin, Border and Padding
 
 ```
-p-4 # padding of 4px in all sides
-px-4 # padding of 4px in x-axis
-py-4 # padding of 4px in x-axis
-pt-4 # padding of 4px at the top, similar for other sides
+p-4 # padding of 1rem/16px in all sides
+px-4 # padding of 1rem/16px in x-axis
+py-4 # padding of 1rem/16px in x-axis
+pt-4 # padding of 1rem/16px at the top, similar for other sides
 
-m-4 # margin of 4px in all sides
-mt-4 # margin of 4px at the top, similar for other side
+m-4 # margin of 1rem/16px in all sides
+mt-4 # margin of 1rem/16px at the top, similar for other side
 
-border-4 # 4px border
+border-4 # 1rem/16px border
 border-gray-100 # gray colored border with less opacity
 ```
 
@@ -170,3 +170,20 @@ theme: {
 ```
 
 `font-body` is the property to use this font.
+
+> FlexBox, height and width
+
+```
+flex # display:flex;
+justify-between # justify-content: space-between;
+justify-end # justify-content: flex-end;
+justify-center # justify-content: center;
+
+justify-items-center # justify-items: center;
+
+items-center # align-items: center;
+items-start # align-items: start;
+
+h-4 # height of 8px
+w-4 # width of 8px
+```
