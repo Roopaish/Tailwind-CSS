@@ -75,6 +75,8 @@ font-bold # bold text
 font-semibold $ semibold text
 
 uppercase # uppercase the text
+
+bg-red-100 # Background color
 ```
 
 > Margin, Border and Padding
@@ -91,3 +93,51 @@ mt-4 # margin of 4px at the top, similar for other side
 border-4 # 4px border
 border-gray-100 # gray colored border with less opacity
 ```
+
+> Modifying already defined classes of Tailwind
+
+Run this command to create tailwind.config.js file which can be used to modify already defined classes. And new property can be added too.
+
+```bash
+npx tailwindcss init --full # --full includes all classes
+```
+
+Above method is not recommended cause it will be hard to distinguish between already defined and custom property we added. Instead we create a blank config file and define new property there.
+
+Rename of delete the above config file and run this command.
+
+```bash
+npx tailwindcss init # this will create a blank(not really blank) config file
+```
+
+We can now add custom property like this.
+
+```js
+module.exports = {
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {
+      // Define new classes/properties here
+      colors: {
+        primary: "#FF6363",
+        secondary: {
+          // For shades
+          100: "#e2e2d5",
+          200: "#888883",
+        },
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+Now re-build the public/styles.css file in order to use this.
+
+> TailwindCss Extension
+
+[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) provides intellisense in tailwind project as we add classes. It works only if config file is present.
