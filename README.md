@@ -197,3 +197,40 @@ md:bg-blue-500 # blue bg for medium sized devices, tablet in landscape
 lg:bg-pink-500 # pink bg for larger devices, laptop
 xl:bg-teal-500 # teal bg for extra-large devices, desktop
 ```
+
+> Tip
+
+It's hard to remember all classes. So to use some css styling and if you don't know the class name, with Tailwind CSS IntelliSense extension on VSCode, we can just type the property or property's value and it will auto-complete for us.
+
+Example: If we want to setup object-fit: cover; as you type cover or object, intellisense will suggest some classes. This works most of the time cause tailwind's classes are mostly name after the property or property's value.
+
+> Cover, Radius, Overflow, Position
+
+```
+object-cover # object-fit: cover;
+block # display: block;
+rounded # slightly rounded corners
+rounded-full # fully rounded corners
+overflow-hidden # overflow: hidden;
+shadow-md # medium strength shadow
+relative # position: relative;
+top-0 # top: 0;
+```
+
+> @apply, add all tailwind classes to one class
+
+In src/styles.css, add a selector and use @apply to add different tailwind classes. Generate public/styles.css afterward.
+
+```css
+/* To use it add class card in html element */
+.card {
+  @apply bg-white rounded overflow-hidden shadow-md relative;
+}
+```
+
+> Grid
+
+```
+grid # display: grid;
+cols-span-1 # grid-column: span 1 / span 1
+```
