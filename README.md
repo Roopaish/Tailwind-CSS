@@ -243,3 +243,16 @@ transition ease-out duration-500 # add transition of 500ms with eas-out function
 
 transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300 # add transform property to scale when hovered with some transition
 ```
+
+> Remove unused css from the final build
+
+In tailwind config file, add a list of files that uses tailwind classes. Now re-build the css.
+
+```js
+module.exports = {
+  purge: {
+    enabled: true, // so that purge will be used automatically when building css
+    content: ["./public/*.html"], // List of files/templates that uses tailwind
+  },
+};
+```
