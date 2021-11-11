@@ -61,3 +61,33 @@ Launch Live-server to view live changes on browser.
 ```bash
 live-server public
 ```
+
+Now we can define classes already defined in Tailwind to use those style in html.
+
+> Text and Colors
+
+```
+text-gray-700 # grey text with more opacity or shade
+text-xl # small text
+text-6xl # big text
+
+font-bold # bold text
+font-semibold $ semibold text
+
+uppercase # uppercase the text
+```
+
+> Margin, Border and Padding
+
+```
+p-4 # padding of 4px in all sides
+px-4 # padding of 4px in x-axis
+py-4 # padding of 4px in x-axis
+pt-4 # padding of 4px at the top, similar for other sides
+
+m-4 # margin of 4px in all sides
+mt-4 # margin of 4px at the top, similar for other side
+
+border-4 # 4px border
+border-gray-100 # gray colored border with less opacity
+```
