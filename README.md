@@ -230,9 +230,11 @@ In src/styles.css, add a selector and use @apply to add different tailwind class
 }
 ```
 
-> Grid
+> Grid, Hover
 
 ```
 grid # display: grid;
 cols-span-1 # grid-column: span 1 / span 1
+
+hover:shadow-inner # when hover, make inset shadow
 ```
