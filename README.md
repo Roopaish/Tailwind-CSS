@@ -187,3 +187,13 @@ items-start # align-items: start;
 h-4 # height of 8px
 w-4 # width of 8px
 ```
+
+> Media Queries, Responsive classes
+
+```
+bg-red-500 # red background for all devices, all + mobile
+sm:bg-green-500 # green bg for smaller devices, tablet
+md:bg-blue-500 # blue bg for medium sized devices, tablet in landscape
+lg:bg-pink-500 # pink bg for larger devices, laptop
+xl:bg-teal-500 # teal bg for extra-large devices, desktop
+```
