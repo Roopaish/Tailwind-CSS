@@ -11,16 +11,16 @@
   <!-- Custom CSS to toggle navbar -->
   <style>
     #nav-toggle:checked~#navbar {
-      display: block;
+      height: 100px;
     }
   </style>
 
 </head>
 
-<body class="text-gray-700 font-body">
+<body class="text-gray-700 font-body overflow-hidden">
 
   <!-- Content Wrapper -->
-  <div class="grid md:grid-cols-6">
+  <div class="grid md:grid-cols-6 h-screen overflow-hidden">
     <!-- Navigation -->
     <div class="md:col-span-1 md:flex md:justify-end">
       <nav class="text-right">
@@ -41,7 +41,7 @@
         <input type="checkbox" name="nav-toggle" id="nav-toggle" class="hidden">
 
         <!-- Actual Navbar-->
-        <ul class="text-sm mt-7 hidden md:block" id="navbar">
+        <ul class="text-sm h-0 md:block transition-all duration-200 ease-linear" id="navbar">
           <li class="font-bold py-1">
             <a href="#" class="px-4 flex justify-end border-primary border-r-4">
               <span>Home</span>
@@ -79,12 +79,15 @@
     <!-- End Navigation -->
 
     <!-- Main -->
-    <main class="px-16 py-6 bg-blue-50 md:col-span-5">
+    <main class="px-16 py-6 bg-blue-50 md:col-span-5 overflow-scroll">
 
       <!-- Login and Signup -->
       <div class="flex justify-center md:justify-end">
-        <a href="#" class="text-primary btn border-primary md:border-2 hover:bg-primary hover:text-white">Log in</a>
-        <a href="#" class="text-primary ml-2 btn border-primary md:border-2 hover:bg-primary hover:text-white">Sign
+        <a href="#"
+          class="text-primary btn border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-300">Log
+          in</a>
+        <a href="#"
+          class="text-primary ml-2 btn border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-300">Sign
           up</a>
       </div>
 
@@ -97,7 +100,7 @@
 
       <div>
         <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Recipes</h4>
-        <div class="mt-8 grid lg:grid-cols-3 sm:grid-cols-2 gap-10">
+        <div class="mt-8 grid lg:grid-cols-3 sm:grid-cols-2 gap-10 max-w-screen-lg">
 
           <!--Latest Recipes Cards -->
           <div class="card hover:shadow-lg">
@@ -152,16 +155,67 @@
         </div>
 
         <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Most Popular</h4>
-        <div class="mt-8">
+
+        <div class="mt-8 grid lg:grid-cols-3 sm:grid-cols-2 gap-10 max-w-screen-lg">
 
           <!-- Most Popular Cards -->
+          <div class="card hover:shadow-lg">
+            <img src="img/stew.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover">
+            <div class="m-4">
+              <span class="font-bold">Buff Chilli Stew</span>
+              <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+            </div>
+            <div class="badge">
+              <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>25 min</span>
+            </div>
+          </div>
+
+          <div class="card hover:shadow-lg">
+            <img src="img/noodles.jpg" alt="noodles" class="w-full h-32 sm:h-48 object-cover">
+            <div class="m-4">
+              <span class="font-bold">Veg Noodles</span>
+              <span class="block text-gray-500 text-sm">Recipe by Cairo</span>
+            </div>
+            <div class="badge">
+              <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>20 min</span>
+            </div>
+          </div>
+
+          <div class="card hover:shadow-lg">
+            <img src="img/curry.jpg" alt="curry" class="w-full h-32 sm:h-48 object-cover">
+            <div class="m-4">
+              <span class="font-bold">Chicken Curry</span>
+              <span class="block text-gray-500 text-sm">Recipe by Alexandro</span>
+            </div>
+            <div class="badge">
+              <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>30 min</span>
+            </div>
+          </div>
           <!-- End Most Popular Cards -->
 
         </div>
 
         <!-- Load More -->
-        <div class="flex justify-center">
-          <div class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner">Load more</div>
+        <div class="mt-12 flex justify-center">
+          <div
+            class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
+            Load more
+          </div>
         </div>
 
       </div>

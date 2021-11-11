@@ -230,7 +230,7 @@ In src/styles.css, add a selector and use @apply to add different tailwind class
 }
 ```
 
-> Grid, Hover
+> Grid, Hover, Transition, Transform
 
 ```
 grid # display: grid;
@@ -238,4 +238,8 @@ cols-span-1 # grid-column: span 1 / span 1
 
 hover:shadow-inner # when hover, make inset shadow
 hidden # display: none;
+
+transition ease-out duration-500 # add transition of 500ms with eas-out function to all
+
+transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300 # add transform property to scale when hovered with some transition
 ```
