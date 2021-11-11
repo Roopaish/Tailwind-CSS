@@ -237,4 +237,5 @@ grid # display: grid;
 cols-span-1 # grid-column: span 1 / span 1
 
 hover:shadow-inner # when hover, make inset shadow
+hidden # display: none;
 ```
